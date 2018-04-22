@@ -1,0 +1,97 @@
+extends layout
+
+block content
+	#map
+	script.
+		var queryData = !{JSON.stringify(jsonData)};
+
+		// Create variable to hold map element, give initial settings to map
+
+		var baseLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png');
+
+		//var baseLayer = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
+
+		// --- Helper function -----
+		function polygonArea(X, Y, numPoints) 
+			{ 
+			  area = 0;         // Accumulates area in the loop
+			  j = numPoints-1;  // The last vertex is the 'previous' one to the first
+
+			  for (i=0; i<numPoints; i++)
+				{ area = area +  (X[j]+X[i]) * (Y[j]-Y[i]); 
+				  j = i;  //j is previous vertex to i
+				}
+			  return area/2;
+			}
+
+
+
+
+		var segmentationImagesLayer = L.tileLayer('/tiles/{z}/{x}/{y}.png', {
+				noWrap: true,
+				tms: true
+			});
+
+		var map = L.map('map',{
+						layers: [baseLayer, segmentationImagesLayer],
+						minZoom: 9,
+						maxZoom: 12
+					}).setView(new L.LatLng(39.13, -121.63), 12); 
+
+		// Create the rectangle selection map
+		// FeatureGroup is to store editable layers
+		var drawnItems = new L.FeatureGroup();
+		map.addLayer(drawnItems);
+
+		var drawControl = new L.Control.Draw({
+			draw:{
+				polygon: false,
+				marker: false,
+				circle: false,
+				polyline: false,
+				circlemarker: false,
+				rectangle: {
+					allowIntersection: false
+				}
+			},
+			edit: {
+				featureGroup: drawnItems,
+				rectangle: {
+					allowIntersection: false
+				}
+			}
+		});
+		map.addControl(drawControl);
+
+		map.on(L.Draw.Event.CREATED, function (e) {
+			var type = e.layerType,
+				layer = e.layer;
+			if (type === 'rectangle') {
+				drawnItems.addLayer(layer);
+				layer.on('click', function() {
+					var latLngCoords = layer.getLatLngs();
+					console.log(latLngCoords); 
+					var seeArea = L.GeometryUtil.geodesicArea(layer.getLatLngs());
+					console.log(seeArea);  
+				});
+				
+			}
+		});
+
+
+		//- var map = L.map('map',{ 
+		//- 				center: [42.375562, -71.106870], 
+		//- 				zoom: 14
+		//- 			});
+
+		//- // Add OpenStreetMap tile layer to map element
+		//- L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+		//- 	attribution: '© OpenStreetMap'
+		//- }).addTo(map);
+
+		// Add JSON to map
+		//- L.geoJson(queryData,{
+		//-     onEachFeature: function (feature, layer) {
+		//-         layer.bindPopup(feature.properties.f2);
+		//-     }
+		//- }).addTo(map);
