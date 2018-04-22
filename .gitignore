@@ -61,4 +61,4 @@ typings/
 public/tiles
 
 # 
-.DS_Store
+*.DS_Store
