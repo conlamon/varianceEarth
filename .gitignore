@@ -59,3 +59,6 @@ typings/
 
 # Tiles
 public/tiles
+
+# 
+.DS_Store
