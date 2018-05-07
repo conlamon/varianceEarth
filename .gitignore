@@ -57,8 +57,11 @@ typings/
 # dotenv environment variables file
 .env
 
-# Tiles
+# Tiles and Data
 public/tiles
+public/data
 
 # 
 *.DS_Store
+
+
