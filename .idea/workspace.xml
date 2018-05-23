@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8929dd5e-a442-4c41-bf77-eb0ebf9bae68" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/.idea/variance-earth.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/src/Intro.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/src/Intro.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/src/SatelliteMap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/src/SatelliteMap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/variance-earth/src/registerServiceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -50,8 +29,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
-              <caret line="64" column="1" lean-forward="true" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+            <state relative-caret-position="347">
+              <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -65,6 +44,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -138,12 +118,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527105527252</updated>
-      <workItem from="1527105530245" duration="80000" />
+      <workItem from="1527105530245" duration="204000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80000" />
+    <option name="totallyTimeSpent" value="204000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="294" y="75" width="1472" height="814" extended-state="0" />
@@ -188,8 +168,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="64" column="1" lean-forward="true" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+        <state relative-caret-position="347">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
         </state>
       </provider>
     </entry>
