@@ -61,7 +61,9 @@ typings/
 public/tiles
 public/data
 
-# 
+# DS Store and idea
+.DS_Store
 *.DS_Store
 
-
+.idea
+*.idea
