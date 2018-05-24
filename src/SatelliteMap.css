@@ -1,14 +1,22 @@
 
 .leaflet-container {
-    height: 500px;
-    width: 80%;
-    margin: 0 auto;
+    height: 680px;
+    width: 100%;
+    margin: 0px auto;
 }
 
 
-.map-container{
-    height: 100%;
+.leaflet-popup-content-wrapper {
+    background-color: rgba(256, 256, 256, 0.7);
 }
+
+.info-div{
+    background-color: rgba(256, 256, 256, 0.8);
+    padding-left: 2px;
+    padding-right: 4px;
+    padding-bottom: 2px;
+}
+
 
 /*CSS Component missing from the internal React-leaflet-draw css*/
 .sr-only {

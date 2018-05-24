@@ -67,3 +67,7 @@ public/data
 
 .idea
 *.idea
+
+#ENV files
+*.env
+.env*
