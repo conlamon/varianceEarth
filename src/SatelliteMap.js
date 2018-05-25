@@ -134,7 +134,7 @@ class SatelliteMap extends Component {
                                 )
                          });
                          // Add a header column to the table
-                         predictionList.unshift(<tr key={'header'}><td>Class:</td><td>Score:</td></tr>)
+                         //predictionList.unshift(<tr key={'header'}><td>Class:</td><td>Score:</td></tr>)
                          // Set the state
                          _thisThat.setState({predictionList: predictionList});
 
