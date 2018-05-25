@@ -40,7 +40,7 @@ class SatelliteMap extends Component {
 
     componentWillMount() {
 
-        // Pre-load the API on opening of this site (since the API goes to sleep with free hosting)
+        // Pre-load the API on opening of this site 
         let coordsPayload = {
             "lat1": this.state.popupPosition[0],
             "lng1": this.state.popupPosition[1]
