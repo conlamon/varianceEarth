@@ -8,7 +8,7 @@ Neural Network (CNN) running on a [Python and Flask based REST API](https://gith
 
 Note: This is an experimental site, with many known limitations and inaccuracies. See Limitations section.
 
-![alt text]("https://github.com/conlamon/varianceEarth/tree/master/media/variancearth.png")
+![Site](https://github.com/conlamon/varianceEarth/blob/master/media/variancearth.png)
 
 
 ## How It Works
