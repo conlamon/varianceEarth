@@ -37,7 +37,7 @@ The main labels that appear in the current implementation are defined as the fol
 
 There are many more labels which can be found [here](https://www.kaggle.com/c/planet-understanding-the-amazon-from-space/data).
 
-Inference is currently being run on an image from [Landsat8](https://www.usgs.gov/products/data-and-tools/real-time-data/remote-land-sensing-and-landsat)
+Inference is currently being run on an image from [Landsat8](https://www.usgs.gov/products/data-and-tools/real-time-data/remote-land-sensing-and-landsat).
 ## Model Choice
 
 A [ResNet architecture](https://arxiv.org/abs/1512.03385) was chosen for the CNN due to it having a
@@ -50,7 +50,7 @@ The current model has multiple limitations:
 
 1. The model was trained on only images of the Amazon rainforest, but inference is being done on a part of California
     - This was done to simply get the full front-end and back-end model working together
-2. Inference is currently being run on a Landsat image, while the model was trained using Planet satellite imagery
+2. Inference is currently being run on a Landsat image (cut into tiles), while the model was trained using Planet satellite imagery
     - This was done due to Landsat imagery being more accessible than Planet imagery, and as an experiment
     to see how well the model performs on different target data
     - It is surprising it works somewhat well with this major difference im test data!
