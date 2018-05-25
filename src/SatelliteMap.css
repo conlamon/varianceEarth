@@ -1,6 +1,6 @@
 
 .leaflet-container {
-    height: 680px;
+    height: 100%;
     width: 100%;
     margin: 0px auto;
 }
@@ -11,10 +11,15 @@
 }
 
 .info-div{
+    font-size: small;
+    text-align: center;
     background-color: rgba(256, 256, 256, 0.8);
-    padding-left: 2px;
-    padding-right: 4px;
+    margin: 1px auto;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 1em;
     padding-bottom: 2px;
+    border-radius: 2%;
 }
 
 

@@ -3,7 +3,9 @@ import { Map, TileLayer, FeatureGroup, Popup} from 'react-leaflet';
 import Control from 'react-leaflet-control';
 import { EditControl } from 'react-leaflet-draw';
 import './SatelliteMap.css';
-
+import LoadingAnimation from './LoadingAnimation';
+import Info from './Info';
+import EmptyDiv from "./EmptyDiv";
 
 class SatelliteMap extends Component {
     constructor() {
@@ -24,13 +26,15 @@ class SatelliteMap extends Component {
                              parseFloat(process.env.REACT_APP_SW_BOUND_LON)],
 
             // Setup the default values to display popup window on map
-            predictionList: [<tr key='waiting'><p>Waiting for the API to load.<br/>
-                                                This may take up to 60 seconds due to the free Heroku Dyno shutting down :(,
-                                                Once, active, inference time is in the 100s ms range</p></tr>],
+            predictionList: [LoadingAnimation()],
             popupPosition: [parseFloat(process.env.REACT_APP_STARTING_LATITUDE),
-                            parseFloat(process.env.REACT_APP_STARTING_LONGITUDE)]
+                            parseFloat(process.env.REACT_APP_STARTING_LONGITUDE)],
 
-        }
+            // Setup Info Box
+            showInfo: true
+        };
+
+        this.handleToggleInfo = this.handleToggleInfo.bind(this)
     }
 
 
@@ -59,6 +63,12 @@ class SatelliteMap extends Component {
             }
             return resp.json();
         })
+    }
+
+    handleToggleInfo() {
+        this.setState(prevState => ({
+            showInfo: !prevState.showInfo
+        }));
     }
 
     // Workhorse function for handling the event of clicking on a created polygon on the map
@@ -123,7 +133,8 @@ class SatelliteMap extends Component {
                                     </tr>
                                 )
                          });
-
+                         // Add a header column to the table
+                         predictionList.unshift(<tr key={'header'}><td>Class:</td><td>Score:</td></tr>)
                          // Set the state
                          _thisThat.setState({predictionList: predictionList});
 
@@ -179,39 +190,15 @@ class SatelliteMap extends Component {
                         <Popup position={this.state.popupPosition} className={'popup-container'}>
                             <table>
                                 <tbody>
-                                    <tr><td>Class:</td><td>Score:</td></tr>
                                     {this.state.predictionList}
                                 </tbody>
                             </table>
                         </Popup>
                     </FeatureGroup>
 
-                    <Control position="topright">
-                        <div className={'info-div'}>
-                            <p id={'info-header'} >
-                                <strong>Classify images of Earth in real-time! </strong>
-                                <br/>Thanks to Convolutional Neural Networks.
-                            </p>
-                            <p id={'info-body'}>
-                                <ol>
-                                    <li>Press the black square on the left side-bar</li>
-                                    <li>Draw a small rectangle on the map</li>
-                                    <li>Click on the drawn rectangle</li>
-                                    <li>Wait for classifications</li>
-                                    <li>Hows it work? <a href={'https://github.com/conlamon/varianceEarth'}>GitHub</a> </li>
-                                    <li>What are the labels? See 5.</li>
-                                    <li>Unconvinced? Scroll left to the <br/>large lake and try classifying it! Also, see 5.</li>
-                                </ol>
-
-                            </p>
-                        </div>
-                    </Control>
                     <Control position="topright" >
-                        <div className={'info-div'}>
-                            <p>
-                                Note: The class 'clear' means <br/>
-                                there are no clouds in the image.
-                            </p>
+                        <div onClick={this.handleToggleInfo}>
+                            {this.state.showInfo ? <Info/> : <EmptyDiv/>}
                         </div>
                     </Control>
                 </Map>
