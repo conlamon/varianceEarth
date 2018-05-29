@@ -6,7 +6,6 @@ A React and Leaflet.js based UI that allows the user to select an area on a sate
 click on this selection and receive a classification. The classification is performed by a Convolutional
 Neural Network (CNN) running on a [Python and Flask based REST API](https://github.com/conlamon/satellite-classification-flask-api).
 
-This is a proof of concept site, with many known limitations and inaccuracies. See Limitations section.
 
 ![Site](https://github.com/conlamon/varianceEarth/blob/master/media/variancearth.png)
 
