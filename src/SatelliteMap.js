@@ -38,33 +38,6 @@ class SatelliteMap extends Component {
     }
 
 
-    componentWillMount() {
-
-        // Pre-load the API on opening of this site 
-        let coordsPayload = {
-            "lat1": this.state.popupPosition[0],
-            "lng1": this.state.popupPosition[1]
-        };
-        fetch(process.env.REACT_APP_API_URL, {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(coordsPayload)
-        }).then(resp => {
-            if (!resp.ok) {
-                if (resp.status >= 400 && resp.status < 500) {
-                    return resp.json().then(data => {
-                        let err = {errorMessage: data.message};
-                        throw err;
-                    })
-                } else {
-                    let err = {errorMessage: 'Please try again later, server is not responding...'}
-                    throw err;
-                }
-            }
-            return resp.json();
-        })
-    }
-
     handleToggleInfo() {
         this.setState(prevState => ({
             showInfo: !prevState.showInfo
@@ -134,7 +107,7 @@ class SatelliteMap extends Component {
                                 )
                          });
                          // Add a header column to the table
-                         //predictionList.unshift(<tr key={'header'}><td>Class:</td><td>Score:</td></tr>)
+                         predictionList.unshift(<tr key={'header'}><td>What's in the image?</td><td>How confident? (0-1)</td></tr>)
                          // Set the state
                          _thisThat.setState({predictionList: predictionList});
 

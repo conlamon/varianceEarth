@@ -14,12 +14,8 @@ class Info extends Component{
                     <li>Wait for classifications</li>
                     <li>Hows it work? <a href={'https://github.com/conlamon/varianceEarth'}> See GitHub</a> </li>
                     <li>What are the labels? See 5.</li>
-                    <li>Unconvinced? Scroll left to the <br/>large lake are and try classifying it! Also, see 5.</li>
+                    <li>Try exploring areas like the<br/>large lake to the left!</li>
                 </ol>
-                <p>
-                    Note: The class 'clear' means <br/>
-                    there are no clouds in the image.
-                </p>
             </div>
         )
     }

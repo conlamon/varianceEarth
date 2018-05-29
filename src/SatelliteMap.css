@@ -22,6 +22,10 @@
     border-radius: 2%;
 }
 
+td {
+    padding: 0.2em;
+}
+
 
 /*CSS Component missing from the internal React-leaflet-draw css*/
 .sr-only {
