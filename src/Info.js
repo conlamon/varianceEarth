@@ -15,6 +15,7 @@ class Info extends Component{
                     <li>Hows it work? <a href={'https://github.com/conlamon/varianceEarth'}> See GitHub</a> </li>
                     <li>What are the labels? See 5.</li>
                     <li>Try exploring areas like the<br/>large lake to the left!</li>
+                    <li>Note: Loading may take about<br/> 10 seconds on first APi call</li>
                 </ol>
             </div>
         )

@@ -64,6 +64,9 @@ class SatelliteMap extends Component {
                     "lng1": latLngCoords['lng']
                };
 
+               // Reset the prediction data list to be the loading animation
+                _that.setState({predictionList: LoadingAnimation()});
+
                // make fetch POST call to the REST API with the lat, lng data
                 fetch(process.env.REACT_APP_API_URL, {
                     method: 'POST',
