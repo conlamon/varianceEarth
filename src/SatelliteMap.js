@@ -110,7 +110,7 @@ class SatelliteMap extends Component {
                                 )
                          });
                          // Add a header column to the table
-                         predictionList.unshift(<tr key={'header'}><td>What's in the image?</td><td>How confident? (0-1)</td></tr>);
+                         predictionList.unshift(<tr key={'header'}> <td>What is in the image?</td> <td>How confident? (0-1)</td></tr>);
                          // Set the state
                          _thisThat.setState({predictionList: predictionList});
 
@@ -143,7 +143,7 @@ class SatelliteMap extends Component {
                     maxZoom={this.state.maxZoom}
                     minZoom={this.state.minZoom}>
                     <TileLayer
-                        attribution="Imagery Courtesy USGS/NASA Landsat, <a href=http://www.esri.com/>Esri</a> and
+                        attribution="Imagery Courtesy USGS/NASA Landsat, <a href=http://www.esri.com/>Esri</a> and \
                         <a href=https://www.kaggle.com/c/planet-understanding-the-amazon-from-space/data/>Planet</a>"
                         url="http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
                     />
