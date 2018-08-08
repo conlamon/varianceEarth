@@ -12,7 +12,11 @@ class Info extends Component{
                     <li>Draw a rectangle on the map</li>
                     <li>Click on the drawn rectangle</li>
                     <li>Wait for classifications</li>
-                    <li>Hows it work? <a href={'https://github.com/conlamon/varianceEarth'}> See GitHub</a> </li>
+                    <li>
+                        Hows it work? <br/>
+                        <a href={'https://github.com/conlamon/varianceEarth'}> GitHub (Frontend)</a> <br/>
+                        <a href={'https://github.com/conlamon/satellite-classification-flask-api'}> GitHub (Backend)</a>
+                    </li>
                     <li>What are the labels? See 5.</li>
                     <li>Try exploring areas like the<br/>large lake to the left!</li>
                 </ol>
