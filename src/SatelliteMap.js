@@ -44,7 +44,7 @@ class SatelliteMap extends Component {
         }));
     }
 
-    // Workhorse function for handling the event of clicking on a created polygon on the map
+    // Workhorse function for handling the event of clicking on a created polygon
     onCreated(e) {
         let type = e.layerType;
         let layer = e.layer;
